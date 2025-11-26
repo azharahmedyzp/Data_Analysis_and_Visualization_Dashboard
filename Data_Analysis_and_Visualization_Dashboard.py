@@ -7,7 +7,7 @@ from io import BytesIO
 
 # App Configuration
 st.set_page_config(page_title="Data Analysis and Visualization Dashboard", layout="wide")
-st.title("📊 Data Analysis and Visualization Dashboard")
+st.title("Data Analysis and Visualization Dashboard")
 
 # Sidebar Navigation
 menu = st.sidebar.selectbox(
@@ -28,7 +28,7 @@ if menu == "Upload Dataset":
         try:
             df = pd.read_csv(uploaded_file)
             st.session_state.df = df
-            st.success("✅ File uploaded successfully!")
+            st.success("File uploaded successfully!")
 
             st.subheader("Dataset Preview")
             st.write(df.head())
@@ -40,7 +40,7 @@ if menu == "Upload Dataset":
 
 # Data Summary
 elif menu == "Data Summary":
-    st.header("📈 Data Summary")
+    st.header("Data Summary")
     df = st.session_state.df
 
     if df is not None:
@@ -63,7 +63,7 @@ elif menu == "Data Summary":
 
 # Visualization Section
 elif menu == "Visualization":
-    st.header("📊 Data Visualization")
+    st.header("Data Visualization")
     df = st.session_state.df
 
     if df is not None:
@@ -108,7 +108,7 @@ elif menu == "Visualization":
 
 # Missing Data Section
 elif menu == "Missing Data":
-    st.header("🩹 Missing Data Handling")
+    st.header("Missing Data Handling")
     df = st.session_state.df
 
     if df is not None:
@@ -126,12 +126,12 @@ elif menu == "Missing Data":
             if action == "Drop missing rows":
                 df.dropna(inplace=True)
                 st.session_state.df = df
-                st.success("✅ Missing rows dropped.")
+                st.success("Missing rows dropped.")
 
             elif action == "Fill missing with mean":
                 df.fillna(df.mean(numeric_only=True), inplace=True)
                 st.session_state.df = df
-                st.success("✅ Missing values filled with column means.")
+                st.success("Missing values filled with column means.")
         else:
             st.info("No missing data found.")
     else:
@@ -139,7 +139,7 @@ elif menu == "Missing Data":
 
 # Download Report Section
 elif menu == "Download Report":
-    st.header("📥 Download Descriptive Report")
+    st.header("Download Descriptive Report")
     df = st.session_state.df
 
     if df is not None:
@@ -156,7 +156,7 @@ elif menu == "Download Report":
 
 # About Section
 elif menu == "About":
-    st.header("ℹ️ About This Project")
+    st.header("About This Project")
     st.write("""
     **Data Analysis and Visualization Dashboard**
 
@@ -174,6 +174,7 @@ elif menu == "About":
 
     Developed as a **Python Mini Project** for demonstrating data analytics workflows.
     """)
+
 
 
 # python -m streamlit run Data_Analysis_and_Visualization_Dashboard.py
