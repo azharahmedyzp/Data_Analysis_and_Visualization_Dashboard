@@ -37,23 +37,6 @@ An interactive **Streamlit** application to explore, analyze, visualize, and rep
 
 ---
 
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone <repository_url>
-cd <repository_folder>
-```
-
-2. Install dependencies:
-
-```bash
-pip install streamlit pandas numpy matplotlib seaborn
-```
-
----
-
 ## Usage
 
 Run the Streamlit app:
@@ -70,25 +53,8 @@ python -m streamlit run Data_Analysis_and_Visualization_Dashboard.py
 
 ---
 
-## Screenshots
-
-*(Add screenshots of your dashboard here to showcase features.)*
-
----
-
-## Contributing
-
-Contributions are welcome! Please submit a pull request or open an issue for improvements or bug fixes.
-
----
-
-## License
-
-This project is open-source and available under the MIT License.
-
----
-
 ## Acknowledgements
 
 * Inspired by common data analysis workflows in Python.
 * Built for learning and demonstration of interactive data visualization.
+
